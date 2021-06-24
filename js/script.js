@@ -21,7 +21,7 @@ function showTabContent(i = 0) {
 }
 
     hideTabContent();
-    showTabContent();
+    // showTabContent();
 
 serviceTabsParent.addEventListener('click', (event) =>{
     const target = event.target;

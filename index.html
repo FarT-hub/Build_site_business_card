@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuisnessCard</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="style/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/fontawesome/all.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <section class="header">
+    <section class="header" id="home">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -26,14 +26,35 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" aria-current="page" href="#">Портфолио</a>
-                                <a class="nav-link" href="#">Услуги</a>
-                                <a class="nav-link" href="#">Цены</a>
-                                <a class="nav-link" href="#">Контакты</a>                 
+                                <a class="nav-link" aria-current="page" href="#portfolio">Портфолио</a>
+                                <a class="nav-link" href="#services">Услуги</a>
+                                <a class="nav-link" href="#price">Цены</a>
+                                <a class="nav-link" href="#contacts">Контакты</a>
                             </div>
                             <div class="call">
                                 <h2>+375 (25) 123-45-67</h2>
-                                <a href="#">Заказать звонок</a>
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Заказать звонок
+                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ваш номер телефона</h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>                                                    
+                                                    <div class="form-floating">
+                                                        <input type="tel" class="form-control" id="floatingPassword"
+                                                            placeholder="Номер телефона">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -43,34 +64,29 @@
     </section>
 
     <section class="main">
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 main-info">
-                    <div class="main-title">
-                        <h1>Строительство</h1>
-                        <h1> и ремонт в Гомеле</h1>
-                    </div>
-                    <div class="main-slogan">
-                        <h3>Надежное будущее строим</h3>
-                        <h3>вместе</h3>
-                    </div>
-                    <a href="#" type="button" class="main-button">Получить консультацию</a>
-                </div>
-
-<!--            </div>-->
-<!--        </div>-->
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 main-info">
+            <div class="main-title">
+                <h1>Строительство</h1>
+                <h1> и ремонт в Гомеле</h1>
+            </div>
+            <div class="main-slogan">
+                <h3>Надежное будущее строим</h3>
+                <h3>вместе</h3>
+            </div>
+            <a href="#" type="button" class="main-button">Получить консультацию</a>
+        </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mainSlide">
-            <div class="carousel slide" data-bs-ride="carousel">
+            <div id="mainSlideIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#mainSlideIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainSlideIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    <button type="button" data-bs-target="#mainSlideIndicators" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    <button type="button" data-bs-target="#mainSlideIndicators" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    <button type="button" data-bs-target="mainSlideIndicators" data-bs-slide-to="4"
                         aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
@@ -90,12 +106,12 @@
                         <img src="img/slide_5.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainSlideIndicators"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Предыдущий</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-next" type="button" data-bs-target="#mainSlideIndicators"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Следующий</span>
@@ -108,34 +124,34 @@
         <div class="work-bg">
             <div class="container">
                 <div class="work-title">как мы работаем</div>
-                    <div class="work-cards">
-                        <div class="col-lg-6 col-md-6 col-sm-12 work-card">
-                            <div class="card-number">01</div>
-                            <p class="card-desc">Бесплатный выезд мастера на объект для оценки работы</p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 work-card">
-                            <div class="card-number">02</div>
-                            <p class="card-desc">Обсуждение работы с заказчиком</p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 work-card">
-                            <div class="card-number">03</div>
-                            <p class="card-desc">Оформление и подписание договора</p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 work-card">
-                            <div class="card-number">04</div>
-                            <p class="card-desc">Выполнение работ в соответствии с пожеланиями заказчика</p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 work-card">
-                            <div class="card-number">05</div>
-                            <p class="card-desc">Прием работы заказчиком и окончательный расчет</p>
-                        </div>
+                <div class="work-cards">
+                    <div class="col-lg-6 col-md-6 col-sm-12 work-card">
+                        <div class="card-number">01</div>
+                        <p class="card-desc">Бесплатный выезд мастера на объект для оценки работы</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 work-card">
+                        <div class="card-number">02</div>
+                        <p class="card-desc">Обсуждение работы с заказчиком</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 work-card">
+                        <div class="card-number">03</div>
+                        <p class="card-desc">Оформление и подписание договора</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 work-card">
+                        <div class="card-number">04</div>
+                        <p class="card-desc">Выполнение работ в соответствии с пожеланиями заказчика</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 work-card">
+                        <div class="card-number">05</div>
+                        <p class="card-desc">Прием работы заказчиком и окончательный расчет</p>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="serv-title">наши услуги</div>
             <div class="serv-container">
@@ -222,8 +238,10 @@
                     </ul>
                 </div>
             </div>
-            <p class="serv-desc">Для многих ремонт — это что-то вроде стихийного бедствия, но чем тщательнее вы его спланируете, тем проще будет его пережить. А уютная, привлекательная и чистая квартира – это мечта любого человека. </p>
-            <a href="#" class="serv-go">Давайте воплотим Ваши мечты  в реальность!</a>
+            <p class="serv-desc">Для многих ремонт — это что-то вроде стихийного бедствия, но чем тщательнее вы его
+                спланируете, тем проще будет его пережить. А уютная, привлекательная и чистая квартира – это мечта
+                любого человека. </p>
+            <a href="#" class="serv-go">Давайте воплотим Ваши мечты в реальность!</a>
         </div>
     </section>
 
@@ -234,10 +252,12 @@
                 <div class="form-container">
                     <h3>Заполните форму</h3>
                     <label>
-                        <input class="form-input" type="text" name="name" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё]{3,15}" required/>
+                        <input class="form-input" type="text" name="name" placeholder="Ваше имя"
+                            pattern="[A-Za-zА-Яа-яЁё]{3,15}" required />
                     </label>
                     <label>
-                        <input class="form-input" type="tel" name="tel" placeholder="Номер телефона" pattern="[0-9]{10,13}" required/>
+                        <input class="form-input" type="tel" name="tel" placeholder="Номер телефона"
+                            pattern="[0-9]{10,13}" required />
                     </label>
                     <label for="area" class="form-desc">
                         <h5>Опишите Вашу заявку</h5>
@@ -245,13 +265,13 @@
                     </label>
                     <button class="form-btn">Получить консультацию</button>
                     <label>
-                        <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf"/>
+                        <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf" />
                         <span class="check-text">Согласен с Политикой конфединциальности</span>
                     </label>
                 </div>
             </form>
             <div class="form-image">
-                <img src="img/formimg.png" alt=""/>
+                <img src="img/formimg.png" alt="" />
             </div>
         </div>
     </section>
@@ -288,15 +308,16 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="portfolio">
         <div class="container">
             <div class="galleryTitle">Галерея работ</div>
             <div class="row">
-                <button class="btn galleryItem"  data-bs-toggle="modal" data-bs-target="#galleryModal_1">
+                <button class="btn galleryItem" data-bs-toggle="modal" data-bs-target="#galleryModal_1">
                     <img src="img/gallery_tiles.jpg" alt="">
                     <div class="galleryItemTitle">Плитка</div>
                 </button>
-                <div class="modal fade" id="galleryModal_1" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_1" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -331,11 +352,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn galleryItem"   data-bs-toggle="modal" data-bs-target="#galleryModal_2">
+                <button class="btn galleryItem" data-bs-toggle="modal" data-bs-target="#galleryModal_2">
                     <img src="img/gallery_masonry.jpg" alt="">
                     <div class="galleryItemTitle">Кладка</div>
                 </button>
-                <div class="modal fade" id="galleryModal_2" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_2" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -374,7 +396,8 @@
                     <img src="img/gallery_finishing.jpg" alt="">
                     <div class="galleryItemTitle">Отделка</div>
                 </button>
-                <div class="modal fade" id="galleryModal_3" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_3" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -413,7 +436,8 @@
                     <img src="img/gallery_roofing.jpg" alt="">
                     <div class="galleryItemTitle">Кровля</div>
                 </button>
-                <div class="modal fade" id="galleryModal_4" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_4" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -452,7 +476,8 @@
                     <img src="img/gallery_plumbing.jpg" alt="">
                     <div class="galleryItemTitle">Сантехника</div>
                 </button>
-                <div class="modal fade" id="galleryModal_5" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_5" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -491,7 +516,8 @@
                     <img src="img/gallery_electrics.jpg" alt="">
                     <div class="galleryItemTitle">Электрика</div>
                 </button>
-                <div class="modal fade" id="galleryModal_6" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                <div class="modal fade" id="galleryModal_6" tabindex="-1" aria-labelledby="galleryModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-body bg-dark">
@@ -530,7 +556,7 @@
         </div>
     </section>
 
-    <section class="priceList">
+    <section class="priceList" id="price">
         <div class="container">
             <div class="priceListTitle">Прайс-лист на услуги</div>
             <div class="col-lg-12 priceListBtns">
@@ -543,673 +569,673 @@
             <div class="priceTables" id="tables">
                 <div class="priceTable">
                     <table>
-                    <tr>
-                        <th class="col-lg-8">Наименование работ</th>
-                        <th class="col-lg-2">Ед. измерения</th>
-                        <th class="col-lg-2">Цена от, руб.</th>
-                    </tr>
-                    <tr>
-                        <td class="workName">Штробление под проводку</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">7</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Устройство ниши под элекрощиток</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">51</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка электрощитка</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">37</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж и подключение электросчетчика</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">42</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение автоматов</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка силовых выключателей, УЗО</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">15</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Прокладка провода</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж установочной коробки</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение механизмов розеток/выключателей</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж кабельканала пластикового</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">3</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение светильника потолочного Армстронг</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">14</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение люстры</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">14</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж настенного светильника, бра</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">15</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж точечного светильника</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж и подключение стабилизатора напряжения</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">55</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка слаботочных датчиков</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">25</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Сверление сквозных отверстий в стене</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Устройство контура заземления, комплекс работ</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">440</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Демонтаж силового кабеля</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Перенос электрощитка в квартиру</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">96</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Разработка схемы электропроводки</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">9</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка кондиционера электриком</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">300</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Прозвонка проводки в помещении</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж и подключение полотенцесушителя электрического</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">35</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Замена электрической розетки (демонтаж + монтаж)</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="col-lg-8">Наименование работ</th>
+                            <th class="col-lg-2">Ед. измерения</th>
+                            <th class="col-lg-2">Цена от, руб.</th>
+                        </tr>
+                        <tr>
+                            <td class="workName">Штробление под проводку</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">7</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Устройство ниши под элекрощиток</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">51</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка электрощитка</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">37</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж и подключение электросчетчика</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">42</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение автоматов</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка силовых выключателей, УЗО</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">15</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Прокладка провода</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж установочной коробки</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение механизмов розеток/выключателей</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж кабельканала пластикового</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение светильника потолочного Армстронг</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">14</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение люстры</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">14</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж настенного светильника, бра</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">15</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж точечного светильника</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж и подключение стабилизатора напряжения</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">55</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка слаботочных датчиков</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">25</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Сверление сквозных отверстий в стене</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Устройство контура заземления, комплекс работ</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">440</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Демонтаж силового кабеля</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Перенос электрощитка в квартиру</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">96</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Разработка схемы электропроводки</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">9</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка кондиционера электриком</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">300</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Прозвонка проводки в помещении</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж и подключение полотенцесушителя электрического</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">35</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Замена электрической розетки (демонтаж + монтаж)</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="priceTable">
                     <table>
-                    <tr>
-                        <th class="col-lg-8">Наименование работ</th>
-                        <th class="col-lg-2">Ед. измерения</th>
-                        <th class="col-lg-2">Цена от, руб.</th>
-                    </tr>
-                    <tr>
-                        <td class="workName">Копка траншеи под фундамент</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">4</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Создание песчаной подушки с уплотнением</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">3</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Приготовление бетонного раствора</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">7</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Армирование ж\б пояса</td>
-                        <td class="units">т.</td>
-                        <td class="costs">68</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Изготовление монолитных колонн</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">31</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Изготовление монолитных стен</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">22</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монолитное перекрытие</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">23</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Заливка отмостки</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">3</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Стена из газоблока или пенобетона</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">7</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Кладка стены из шлакоблока</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Кладка облицовочного кирпича на фассад</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Перегородки в 1/2 кирпича (черновая кладка)</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Стена черновая (не более 380 шт. на куб)</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">12</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Стена под  расшивку (не более 380 шт. на куб)</td>
-                        <td class="units">м<sup>3</sup></td>
-                        <td class="costs">18</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Армирование кладки сеткой</td>
-                        <td class="units">кг.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Анкеровка одной стены к  другой</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">7</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Кладка вентканалов и дымохода</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Кладка столбов забора</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">17</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Штукатурк фасада цементно-песчаная</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Покраска фасада или стены (в 2 слоя)</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Облицовка фасада или стены сайдингом</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Облицовка фасада плоским камнем</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">5</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж и демонтаж лесов</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Вентилируемый фасад</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Облицовка фасада или стены клинкерной плиткой</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">5</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="col-lg-8">Наименование работ</th>
+                            <th class="col-lg-2">Ед. измерения</th>
+                            <th class="col-lg-2">Цена от, руб.</th>
+                        </tr>
+                        <tr>
+                            <td class="workName">Копка траншеи под фундамент</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Создание песчаной подушки с уплотнением</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Приготовление бетонного раствора</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">7</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Армирование ж\б пояса</td>
+                            <td class="units">т.</td>
+                            <td class="costs">68</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Изготовление монолитных колонн</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">31</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Изготовление монолитных стен</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">22</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монолитное перекрытие</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">23</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Заливка отмостки</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Стена из газоблока или пенобетона</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">7</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Кладка стены из шлакоблока</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Кладка облицовочного кирпича на фассад</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Перегородки в 1/2 кирпича (черновая кладка)</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Стена черновая (не более 380 шт. на куб)</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">12</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Стена под расшивку (не более 380 шт. на куб)</td>
+                            <td class="units">м<sup>3</sup></td>
+                            <td class="costs">18</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Армирование кладки сеткой</td>
+                            <td class="units">кг.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Анкеровка одной стены к другой</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">7</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Кладка вентканалов и дымохода</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Кладка столбов забора</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">17</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Штукатурк фасада цементно-песчаная</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Покраска фасада или стены (в 2 слоя)</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Облицовка фасада или стены сайдингом</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Облицовка фасада плоским камнем</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж и демонтаж лесов</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Вентилируемый фасад</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Облицовка фасада или стены клинкерной плиткой</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">5</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="priceTable">
                     <table>
-                    <tr>
-                        <th class="col-lg-8">Наименование работ</th>
-                        <th class="col-lg-2">Ед. измерения</th>
-                        <th class="col-lg-2">Цена от, руб.</th>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж утеплителя крыши</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Укладка ондулина или шифера</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">12</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Укладка битумной черепицы</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">18</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Укладка металлочерепицы</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">15</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж ОСБ плит</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Устройство стропильной конструкции</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">16</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж обрешетки крыши</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Обработка антисептиком</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Подшивка свесов крыши сайдингом</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">17</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж ливневой системы (труба, желоб)</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">15</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Укладка подкладочного ковра</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">4</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Гидроизоляция кровли мастика и еврорубероид</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">12</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Демонтаж шифера с крыши</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">11</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж капельника</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Устройство ПВХ мембраны по плоскости</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">5</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Устройство карнизных окончаний</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">16</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж контррейки</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">3</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Утепление кровли минватой</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка конька\снегоупоров</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка флюгера, колпака на дымоход</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Демонтаж стропил</td>
-                        <td class="units">м<sup>2</sup></td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж громоотвода</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">16</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж антенн и мачт</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">11</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж маурлэта</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Гидроизоляция вентканалов</td>
-                        <td class="units">м.пог</td>
-                        <td class="costs">12</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="col-lg-8">Наименование работ</th>
+                            <th class="col-lg-2">Ед. измерения</th>
+                            <th class="col-lg-2">Цена от, руб.</th>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж утеплителя крыши</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Укладка ондулина или шифера</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">12</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Укладка битумной черепицы</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">18</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Укладка металлочерепицы</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">15</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж ОСБ плит</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Устройство стропильной конструкции</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">16</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж обрешетки крыши</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Обработка антисептиком</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Подшивка свесов крыши сайдингом</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">17</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж ливневой системы (труба, желоб)</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">15</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Укладка подкладочного ковра</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Гидроизоляция кровли мастика и еврорубероид</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">12</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Демонтаж шифера с крыши</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">11</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж капельника</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Устройство ПВХ мембраны по плоскости</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Устройство карнизных окончаний</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">16</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж контррейки</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Утепление кровли минватой</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка конька\снегоупоров</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка флюгера, колпака на дымоход</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Демонтаж стропил</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж громоотвода</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">16</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж антенн и мачт</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">11</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж маурлэта</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Гидроизоляция вентканалов</td>
+                            <td class="units">м.пог</td>
+                            <td class="costs">12</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="priceTable">
                     <table>
-                    <tr>
-                        <th class="col-lg-8">Наименование работ</th>
-                        <th class="col-lg-2">Ед. измерения</th>
-                        <th class="col-lg-2">Цена от, руб.</th>
-                    </tr>
-                    <tr>
-                        <td class="workName">Штробление под трубы 5см.</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Демонтаж канализации</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Переваривание стояков (замена труб)</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">9</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Прокладка металлопластиковых труб водоснабжения</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Прокладка полипропиленовых труб водоснабжения</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Прокладка медных труб водоснабжения</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">2</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Врезка в стояк - 1 точка вреза</td>
-                        <td class="units">м.пог.шт.</td>
-                        <td class="costs">5</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Замена стояка канализации в пределах одного этажа</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">18</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Внутренняя разводка труб канализации</td>
-                        <td class="units">м.пог.</td>
-                        <td class="costs">1</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка ванны (без смесителя)</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">28</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка унитаза или биде</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">5</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка умывальника или мойки</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">4</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка смесителя для ванны, умывальника, биде, душа</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">3</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение бойлера сантехником</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение стиральной/посудомоечной машины</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">4</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка счетчика воды</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">4</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж коллектора</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">9</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж гидроаккумулятора</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж простого фильтра очистки воды</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">6</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Расчеканка чугунной канализации</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж сололифта</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">13</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж кухонного измельчителя</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">8</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Монтаж мультибокса (смеситель встраиваемый в стену)</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">13</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка инсталяции</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">10</td>
-                    </tr>
-                    <tr>
-                        <td class="workName">Установка и подключение ванны с гидромассажем</td>
-                        <td class="units">шт.</td>
-                        <td class="costs">38</td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="col-lg-8">Наименование работ</th>
+                            <th class="col-lg-2">Ед. измерения</th>
+                            <th class="col-lg-2">Цена от, руб.</th>
+                        </tr>
+                        <tr>
+                            <td class="workName">Штробление под трубы 5см.</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Демонтаж канализации</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Переваривание стояков (замена труб)</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">9</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Прокладка металлопластиковых труб водоснабжения</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Прокладка полипропиленовых труб водоснабжения</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Прокладка медных труб водоснабжения</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Врезка в стояк - 1 точка вреза</td>
+                            <td class="units">м.пог.шт.</td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Замена стояка канализации в пределах одного этажа</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">18</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Внутренняя разводка труб канализации</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">1</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка ванны (без смесителя)</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">28</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка унитаза или биде</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка умывальника или мойки</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка смесителя для ванны, умывальника, биде, душа</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение бойлера сантехником</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение стиральной/посудомоечной машины</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка счетчика воды</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж коллектора</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">9</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж гидроаккумулятора</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж простого фильтра очистки воды</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">6</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Расчеканка чугунной канализации</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж сололифта</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">13</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж кухонного измельчителя</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж мультибокса (смеситель встраиваемый в стену)</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">13</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка инсталяции</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и подключение ванны с гидромассажем</td>
+                            <td class="units">шт.</td>
+                            <td class="costs">38</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="priceTable">
+                <div class="priceTable"> 
                     <table>
-                <tr>
-                    <th class="col-lg-8">Наименование работ</th>
-                    <th class="col-lg-2">Ед. измерения</th>
-                    <th class="col-lg-2">Цена от, руб.</th>
-                </tr>
-                <tr>
-                    <td class="workName">Штукатурка по маякам</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">10</td>
-                </tr>
-                <tr>
-                    <td class="workName">Установка и демонтаж маяка</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">2</td>
-                </tr>
-                <tr>
-                    <td class="workName">Штукатурка маяка по плоскости</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">5</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж армирующей сетки</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">2</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж ГКЛ (ровный)</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">10</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж конструкций ГКЛ (короб)</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">10</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж конструкций ГКЛ со скрытой подсветкой</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">12</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж криволинейного потолочного откоса</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs"></td>
-                </tr>
-                <tr>
-                    <td class="workName">Финишное шлифование и затирка потолка</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">12</td>
-                </tr>
-                <tr>
-                    <td class="workName">Проклейка швов серпянкой</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">4</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж подвесного потолка "Грильято"</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">3</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж подвесного потолка "Армстронг"</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs"></td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж пластиковых панелей на потолке</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">10</td>
-                </tr>
-                <tr>
-                    <td class="workName">Монтаж натяжного потолка (с материалом)</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">8</td>
-                </tr>
-                <tr>
-                    <td class="workName">Поклейка декоративного багета</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">10</td>
-                </tr>
-                <tr>
-                    <td class="workName">Подготовка конструкций из ГКЛ к покраске</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">16</td>
-                </tr>
-                <tr>
-                    <td class="workName">Выравнивание балок в одну плоскость</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">44</td>
-                </tr>
-                <tr>
-                    <td class="workName">Установка перфорированного угла</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">4</td>
-                </tr>
-                <tr>
-                    <td class="workName">Шлифовка</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">5</td>
-                </tr>
-                <tr>
-                    <td class="workName">Заделка стыков ГКЛ</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">2</td>
-                </tr>
-                <tr>
-                    <td class="workName">Покраска потолка</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">2</td>
-                </tr>
-                <tr>
-                    <td class="workName">Окраска полиуретанового потолочного плинтуса</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">2</td>
-                </tr>
-                <tr>
-                    <td class="workName">Поклейка потолочного плинтуса (пенопласт)</td>
-                    <td class="units">м.пог.</td>
-                    <td class="costs">3</td>
-                </tr>
-                <tr>
-                    <td class="workName">Грунтовка поверхностей</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">3</td>
-                </tr>
-                <tr>
-                    <td class="workName">Шпатлевание поверхностей (1 слой)</td>
-                    <td class="units">м<sup>2</sup></td>
-                    <td class="costs">15</td>
-                </tr>
-            </table>
+                        <tr>
+                            <th class="col-lg-8">Наименование работ</th>
+                            <th class="col-lg-2">Ед. измерения</th>
+                            <th class="col-lg-2">Цена от, руб.</th>
+                        </tr>
+                        <tr>
+                            <td class="workName">Штукатурка по маякам</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка и демонтаж маяка</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Штукатурка маяка по плоскости</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж армирующей сетки</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж ГКЛ (ровный)</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж конструкций ГКЛ (короб)</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж конструкций ГКЛ со скрытой подсветкой</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">12</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж криволинейного потолочного откоса</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs"></td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Финишное шлифование и затирка потолка</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">12</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Проклейка швов серпянкой</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж подвесного потолка "Грильято"</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж подвесного потолка "Армстронг"</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs"></td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж пластиковых панелей на потолке</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Монтаж натяжного потолка (с материалом)</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">8</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Поклейка декоративного багета</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">10</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Подготовка конструкций из ГКЛ к покраске</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">16</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Выравнивание балок в одну плоскость</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">44</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Установка перфорированного угла</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">4</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Шлифовка</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">5</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Заделка стыков ГКЛ</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Покраска потолка</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Окраска полиуретанового потолочного плинтуса</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">2</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Поклейка потолочного плинтуса (пенопласт)</td>
+                            <td class="units">м.пог.</td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Грунтовка поверхностей</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">3</td>
+                        </tr>
+                        <tr>
+                            <td class="workName">Шпатлевание поверхностей (1 слой)</td>
+                            <td class="units">м<sup>2</sup></td>
+                            <td class="costs">15</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <a href="#" class="priceLoadBtn" download="#tables">Скачать весь прайс</a>
@@ -1218,32 +1244,41 @@
 
     <section class="contacts">
         <div class="contactsTitle">Свяжитесь с нами или оставьте заявку</div>
-        <div class="col-lg-12 col-md-12 col-sm-12 contactsBg">
-            <img src="img/contacts.png" alt="" class="col-lg-6 col-md-6 col-sm-12 contactsImg">
-            <form action="" class="col-lg-6 col-md-6 col-sm-12 contactsForm">
-                <div class="form-container">
-                    <h3>Заполните форму</h3>
-                    <label>
-                        <input class="form-input" type="text" name="name" placeholder="Ваше имя"/>
-                    </label>
-                    <label>
-                        <input class="form-input" type="text" name="tel" placeholder="Номер телефона"/>
-                    </label>
-                    <label for="area" class="form-desc">
-                        <h5>Опишите Вашу заявку</h5>
-                        <textarea name="textarea" cols="30" rows="6"></textarea>
-                    </label>
-                    <button class="form-btn">Получить консультацию</button>
-                    <label>
-                        <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf"/>
-                        <span class="check-text">Согласен с Политикой конфединциальности</span>
-                    </label>
+        <div class="contactsBg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <img src="img/contacts.png" class="contactsImg" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <form action="" class=" contactsForm">
+                            <div class="form-container">
+                                <h3>Заполните форму</h3>
+                                <label>
+                                    <input class="form-input" type="text" name="name" placeholder="Ваше имя" />
+                                </label>
+                                <label>
+                                    <input class="form-input" type="text" name="tel" placeholder="Номер телефона" />
+                                </label>
+                                <label for="area" class="form-desc">
+                                    <h5>Опишите Вашу заявку</h5>
+                                    <textarea name="textarea" cols="30" rows="6"></textarea>
+                                </label>
+                                <button class="form-btn">Получить консультацию</button>
+                                <label>
+                                    <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf" />
+                                    <span class="check-text">Согласен с Политикой конфединциальности</span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
+
         </div>
     </section>
 
-    <footer>
+    <footer id="contacts">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 social">
@@ -1251,7 +1286,8 @@
                         <i class="fas fa-phone-alt"></i><a href="tel:375291234567" type="tel"> +375-29-123-45-67</a>
                     </div>
                     <div class="email">
-                        <i class="fas fa-envelope"></i><a href="mailto:stroyka@gmail.com" type="email"> stroyka@gmail.com</a>
+                        <i class="fas fa-envelope"></i><a href="mailto:stroyka@gmail.com" type="email">
+                            stroyka@gmail.com</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 info">
@@ -1263,8 +1299,11 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <div class="upArrow">
+       <a href="#home"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+
+    <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/fontawesome/all.min.js"></script>
     <script src="js/script.js"></script>
 </body>
