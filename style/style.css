@@ -37,7 +37,7 @@ img {
     line-height: 20px;
     letter-spacing: 0.05em;
     color: rgb(255, 255, 255);
-    margin-right: 50px;   
+    margin-right: 25px;   
 }
 
 .navbar-light .navbar-nav .nav-link:last-child {
@@ -87,6 +87,11 @@ img {
     border-radius: 15px;
 }
 
+.call .modal-body {
+    text-align: left;
+    margin: 0;
+}
+
 .call .modal-header {    
     padding: 0;
     padding-top: 1rem;
@@ -101,6 +106,14 @@ img {
     color: #dee2e6;
     background-color: #242025;
     border: 1px solid #dee2e6;
+}
+
+.call .form-label {
+    color: #ffffff;
+}
+
+.call .modal-body .btn {
+    text-align: center;
 }
 
 /*  Main section */
@@ -120,7 +133,7 @@ img {
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 55px;
+    font-size: 50px;
     text-align: left;
     color: #FFFFFF;
 }
@@ -131,7 +144,7 @@ img {
 .main-slogan>h3 {
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
     text-align: left;
     color: #FFFFFF;
@@ -165,14 +178,13 @@ img {
 
 /* Swiper */
 .mainSlide {
-    max-width: 100%;
     border-top: 10px solid #ff7a00;
     border-bottom: 10px solid #FF7A00;
     border-left: 10px solid #FF7A00;
 }
 
 .mainSlide .carousel {
-    margin: 5% 10% 5% -10%;
+    margin: 5% 5% 5% -5%;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -194,11 +206,11 @@ img {
     transition: opacity .6s ease;
 }
 
-
 .work {
     background: url("../img/ourworkbg.jpg");
     background-size: cover;
 }
+
 .work-bg {
     padding: 60px 0;
     background: rgba(0, 0, 0, 0.65);
@@ -212,6 +224,7 @@ img {
     color: #FFFFFF;
     z-index: 99;
 }
+
 .work-title::before {
     content: "";
     float: left;
@@ -221,6 +234,7 @@ img {
     border-bottom: solid 3px #FF7A00;
     z-index: 99;
 }
+
 .work-title::after {
     content: "";
     float: right;
@@ -230,18 +244,21 @@ img {
     border-bottom: solid 3px #FF7A00;
     z-index: 99;
 }
+
 .work-cards {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
+
 .work-card {   
     display: flex;
     align-items: center;
     justify-content: left;
     margin-top: 50px;
 }
+
 .card-number {
     font-size: 60px;
     line-height: 73px;
@@ -250,6 +267,7 @@ img {
     margin-right: 20px;
     margin-left: 0;
 }
+
 .card-desc {
     font-size: 18px;
     line-height: 22px;
@@ -257,7 +275,6 @@ img {
     color: #FFFFFF;
     margin-left: 0;
 }
-
 
 .serv-container {
     display: flex;
@@ -304,6 +321,7 @@ img {
     opacity: 0.95;
     transition:.5s opacity;
 }
+
 .serv-title {
     position: relative;
     text-align: center;
@@ -314,6 +332,7 @@ img {
     margin-top: 70px;
     margin-bottom: 80px;
 }
+
 .serv-title::after {
     content: "";
     position: absolute;
@@ -326,6 +345,7 @@ img {
     border-bottom: solid 3px #FF7A00;
     z-index: 99;
 }
+
 .serv-menu {
     position: relative;
 }
@@ -362,11 +382,13 @@ img {
     left: 8px;
     max-width: 20px;
 }
+
 .serv-link-img {
     width: inherit;
     height: inherit;
     opacity: 0.3;
 }
+
 .serv-link>p {
     position: absolute;
     top: 50%;
@@ -385,8 +407,8 @@ img {
 
 .child-menu {
     text-align: center;
-    /*list-style-type: none;*/
 }
+
 .child-menu>h3 {
     text-align: center;
     font-size: 20px;
@@ -394,6 +416,7 @@ img {
     margin: 45px 0;
     color: #F17D11;
 }
+
 .child-menu-item {
     font-size: 18px;
     line-height: 2;
@@ -428,21 +451,23 @@ img {
     background-image: url("../img/formbg.jpg");
     background-size: cover;
 }
+
 .form-bg {
     display: flex;
-    background: rgba(198, 96, 79, .42);
+    align-items: center;
+    justify-content: space-between;
 }
+
 .entryForm {
-    width: 390px;
-    height: 460px;
+    width: 320px;
+    height: 450px;
     background: #1C1D1E;
     border: 2px solid #FF7A00;
     box-sizing: border-box;
     border-radius: 15px;
     text-align: center;
-    margin-top: 55px;
-    margin-right: 20px;
 }
+
 .form-container {
     width: 285px;
     text-align: left;
@@ -457,9 +482,7 @@ img {
     color: #FFFFFF;
     margin: 20px 0;
 }
-label {
-    width: 100%;
-}
+
 
 .form-input {
     display: block;
@@ -477,6 +500,11 @@ label {
     letter-spacing: 0.05em;
     color: #FFFFFF;
 }
+
+.form-input::placeholder {
+    color: #ffffff;
+}
+
 .form-desc>h5 {
     text-align: left;
     font-style: normal;
@@ -487,6 +515,7 @@ label {
     color: #FFFFFF;
     margin-bottom: 10px;
 }
+
 textarea {
     display: block;
     width: 100%;
@@ -499,6 +528,7 @@ textarea {
     outline: none;
     padding: 5px;
 }
+
 .form-btn {
     display: block;
     width: 100%;
@@ -517,23 +547,26 @@ textarea {
     cursor: pointer;
     outline: none;
 }
+
 .form-btn:hover {
     background-color: #3d3d3d;
 }
+
 .form-check {
     display: inline-block;
     cursor: pointer;
 }
+
 .check-text {
-    font-style: normal;
-    font-weight: normal;
     font-size: 10px;
     line-height: 12px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     margin-left: 10px;
 }
+
 .form-image {
+    width: 50%;
     margin-top: -2%;
     z-index: 999;
 }
@@ -644,9 +677,52 @@ textarea {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.gallery .modal-dialog {
+    max-width: 80% !important;
+    margin: 1.75rem auto;
+}
+
+.gallery .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.gallery .modal-body {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.gallery .modal-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    background: #828181;
+    margin-bottom: 3vw;
+}
+
+.gallery .modal-img img {
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+}
+
 .priceList {
     margin-bottom: 50px;
 }
+
 .priceListBtns {
     display: flex;
     width: 100%;
@@ -743,39 +819,6 @@ th {
     border-bottom: none;
 }
 
-.contacts {
-    margin-top: 50px;
-}
-
-.contactsTitle {
-    text-align: center;
-    font-size: 30px;
-    line-height: 37px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin: 50px 0;
-    z-index: 99;
-}
-
-.contactsBg {
-    background: url("../img/formbg.jpg") no-repeat;
-    background-size: cover;
-}
-
-.contactsImg {
-        max-width: 100%;
-    }
-
-.contactsForm {
-    max-width: 390px;
-    max-height: 460px;
-    background: #1C1D1E;
-    border: 2px solid #FF7A00;
-    box-sizing: border-box;
-    border-radius: 15px;
-    text-align: center;
-}
-
 footer {
     margin-top: 50px;
 }
@@ -807,43 +850,92 @@ footer .info {
     color: #ffffff;
 }
 
-.gallery .modal-dialog {
-    max-width: 80% !important;
-    margin: 1.75rem auto;
-}
 
-.gallery .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
-    outline: 0;
-}
+@media (max-width: 991.98px) {
 
-.gallery .modal-body {
-    display: flex;
-    overflow-y: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-}
+    .navbar-brand {
+        margin: 0;
+    }
 
-.gallery .modal-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    background: #828181;
-    margin-bottom: 3vw;
-}
+    .navbar-brand img {
+        width: 60%;
+    }
 
-.gallery .modal-img img {
-    width: inherit;
-    height: inherit;
-    border-radius: 15px;
+    .navbar-toggler:hover {
+        background: #63636559;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.1rem;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        margin: auto;
+    }
+
+    .navbar-light .navbar-nav .nav-link:last-child {
+        margin: auto;
+    }
+
+    .work-title::before, .work-title::after {        
+        display: none;        
+    }
+
+    .call {
+        text-align: center;
+    }
+
+    .serv-desc {
+        font-size: 14px;
+        text-align: center;
+        color: #ffffff;
+        margin: 25px 25px 50px;
+    }
+    
+    .entryForm {
+        width: 290px;
+        height: 350px;
+        border: 2px solid #FF7A00;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        width: 230px;
+    }
+
+    .form-container>h3 {
+        font-size: 20px;
+        line-height: 5px;
+        margin: 10px 0;
+    }
+
+    .form-input {
+        height: 20px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .form-desc>h5 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .form-btn {
+        height: 40px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+    }
+
+    .form-check-label {
+        font-size: 8px;
+        color: #ffffff;
+    }
+
+    .about {
+        background: url(../img/about_bg.jpg) no-repeat;
+        background-size: cover;
+        margin: 40px 0;
+    }
 }

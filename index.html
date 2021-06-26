@@ -14,7 +14,7 @@
     <section class="header" id="home">
         <div class="container">
             <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                             <img src="img/logo.png" alt="brand-logo" />
@@ -41,16 +41,20 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Ваш номер телефона</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Оставьте ваши контактные данные</h5>
                                             </div>
                                             <div class="modal-body">
                                                 <form>                                                    
-                                                    <div class="form-floating">
-                                                        <input type="tel" class="form-control" id="floatingPassword"
-                                                            placeholder="Номер телефона">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-outline-dark">Submit</button>
+                                                    <div class="mb-3">
+                                                        <label for="formGroupExampleInput" class="form-label">Имя</label>
+                                                        <input type="text" class="form-control" id="formGroupExampleInput">
+                                                      </div>
+                                                      <div class="mb-3">
+                                                        <label for="formGroupExampleInput2" class="form-label">Номер телефона</label>
+                                                        <input type="text" class="form-control" id="formGroupExampleInput2">
+                                                      </div>                                                    
                                                 </form>
+                                                <button type="submit" class="btn btn-dark">Submit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -152,7 +156,6 @@
 
 
     <section class="services" id="services">
-        <div class="container">
             <div class="serv-title">наши услуги</div>
             <div class="serv-container">
                 <div class="serv-tab">
@@ -242,36 +245,37 @@
                 спланируете, тем проще будет его пережить. А уютная, привлекательная и чистая квартира – это мечта
                 любого человека. </p>
             <a href="#" class="serv-go">Давайте воплотим Ваши мечты в реальность!</a>
-        </div>
     </section>
 
 
     <section class="form">
-        <div class="form-bg">
-            <form action="" class="entryForm">
-                <div class="form-container">
-                    <h3>Заполните форму</h3>
-                    <label>
-                        <input class="form-input" type="text" name="name" placeholder="Ваше имя"
-                            pattern="[A-Za-zА-Яа-яЁё]{3,15}" required />
-                    </label>
-                    <label>
-                        <input class="form-input" type="tel" name="tel" placeholder="Номер телефона"
-                            pattern="[0-9]{10,13}" required />
-                    </label>
-                    <label for="area" class="form-desc">
-                        <h5>Опишите Вашу заявку</h5>
-                        <textarea name="textarea" id="area" cols="30" rows="6"></textarea>
-                    </label>
-                    <button class="form-btn">Получить консультацию</button>
-                    <label>
-                        <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf" />
-                        <span class="check-text">Согласен с Политикой конфединциальности</span>
-                    </label>
+            <div class="container">
+                <div class="form-bg">
+                <form action="" class="entryForm">
+                    <div class="form-container">
+                        <h3>Заполните форму</h3>
+                        <label>
+                            <input class="form-input" type="text" name="name" placeholder="Ваше имя"
+                                pattern="[A-Za-zА-Яа-яЁё]{3,15}" required />
+                        </label>
+                        <label>
+                            <input class="form-input" type="tel" name="tel" placeholder="Номер телефона"
+                                pattern="[0-9]{10,13}" required />
+                        </label>
+                        <label for="area" class="form-desc">
+                            <h5>Опишите Вашу заявку</h5>
+                            <textarea name="textarea" id="area" cols="30" rows="4"></textarea>
+                        </label>
+                        <button class="form-btn">Получить консультацию</button>
+                        <div class="form-chek">
+                            <input type="checkbox" class="form-check-input" id="formCheck" placeholder="sdfasdfadsfadf" />
+                            <label class="form-check-label" for="formCheck">Согласен с Политикой конфединциальности</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-image">
+                    <img src="img/formimg.png" alt="" />
                 </div>
-            </form>
-            <div class="form-image">
-                <img src="img/formimg.png" alt="" />
             </div>
         </div>
     </section>
@@ -290,7 +294,7 @@
                             <li>Доступные цены</li>
                         </ul>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="col-lg-4 col-md-6 col-sm-12 carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="img/about_slide1.png" class="d-block w-100" alt="...">
@@ -1103,7 +1107,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="priceTable"> 
+                <div class="priceTable">
                     <table>
                         <tr>
                             <th class="col-lg-8">Наименование работ</th>
@@ -1242,46 +1246,42 @@
         </div>
     </section>
 
-    <section class="contacts">
-        <div class="contactsTitle">Свяжитесь с нами или оставьте заявку</div>
-        <div class="contactsBg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="img/contacts.png" class="contactsImg" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <form action="" class=" contactsForm">
-                            <div class="form-container">
-                                <h3>Заполните форму</h3>
-                                <label>
-                                    <input class="form-input" type="text" name="name" placeholder="Ваше имя" />
-                                </label>
-                                <label>
-                                    <input class="form-input" type="text" name="tel" placeholder="Номер телефона" />
-                                </label>
-                                <label for="area" class="form-desc">
-                                    <h5>Опишите Вашу заявку</h5>
-                                    <textarea name="textarea" cols="30" rows="6"></textarea>
-                                </label>
-                                <button class="form-btn">Получить консультацию</button>
-                                <label>
-                                    <input type="checkbox" class="form-check" placeholder="sdfasdfadsfadf" />
-                                    <span class="check-text">Согласен с Политикой конфединциальности</span>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
+    <section class="form">
+        <div class="container">
+            <div class="form-bg">
+                <div class="form-image">
+                    <img src="img/contacts.png" alt="" />
                 </div>
-            </div>
-
+                <form action="" class="entryForm">
+                    <div class="form-container">
+                        <h3>Заполните форму</h3>
+                        <label>
+                            <input class="form-input" type="text" name="name" placeholder="Ваше имя"
+                                pattern="[A-Za-zА-Яа-яЁё]{3,15}" required />
+                        </label>
+                        <label>
+                            <input class="form-input" type="tel" name="tel" placeholder="Номер телефона"
+                                pattern="[0-9]{10,13}" required />
+                        </label>
+                        <label for="area" class="form-desc">
+                            <h5>Опишите Вашу заявку</h5>
+                            <textarea name="textarea" id="area" cols="30" rows="4"></textarea>
+                        </label>
+                        <button class="form-btn">Получить консультацию</button>
+                        <div class="form-chek">
+                            <input type="checkbox" class="form-check-input" id="formCheck" placeholder="sdfasdfadsfadf" />
+                            <label class="form-check-label" for="formCheck">Согласен с Политикой конфединциальности</label>
+                        </div>
+                    </div>
+                </form>           
         </div>
-    </section>
+    </div>
+</section>
 
     <footer id="contacts">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 social">
+                <div class="col-6 social">
                     <div class="tel">
                         <i class="fas fa-phone-alt"></i><a href="tel:375291234567" type="tel"> +375-29-123-45-67</a>
                     </div>
@@ -1290,7 +1290,7 @@
                             stroyka@gmail.com</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 info">
+                <div class="col-6 info">
                     <h5>ИП Костин А.Н.</h5>
                     <h5>УНП 11111111</h5>
                     <h5>Юридический адрес</h5>
